@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete JavaScript Course</title>
+</head>
+<body>
+    <div id ="output">Complete JavaScript Course</div>
+    <form name = "myForm">
+        <textarea name="txtarea" rows=12 cols=100></textarea>
+        <input type = "button" onclick="lookUp()" value = "get emails">
+        <textarea name = "txtarea2" rows=12 cols=100></textarea>
+
+    </form>
+
+    <script>
+
+        function lookUp(){
+            var rawTxt = document.myForm.txtarea.value;
+            var eData = rawTxt.match(/([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9._-]+)/gi);
+
+            var html = "";
+            var holder = [];
+            var p = new RegExp("java", "ig");
+
+            var newvar = p.test(rawTxt);
+            var newvar2 = p.exec(rawTxt);
+            console.log(newvar);
+            console.log(newvar2);
+//p.test(rawTxt) the test() method returns a Boolean result i.e., true if 
+//               the specified match is present or else returns false if it is not present.
+//p.exec(rawTxt) If the match of the string is present in the given string it 
+//               returns an array and if the match is not found in the given string, then it returns a null value.
+            for(var x = 0; x<eData.length; x++){
+                if(holder.indexOf(eData[x]) == -1){
+                    holder.push(eData[x]);
+                }
+            }
+            document.myForm.txtarea2.value = holder.join('|');
+        }
+    </script>
+</body>
+</html>

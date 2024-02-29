@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows set timeout</title>
+</head>
+<body>
+    <div id="wrapper"></div>
+    <input type="button" onclick="startInt()" value="start">
+    <input type="button" onclick="clearInt()" value="stop">
+    <script>
+        var output = document.getElementById("wrapper");
+        var myTimer;
+
+        function startInt(){
+            myPopup();
+            myTimer = window.setTimeout(startInt, 1000); // it triggers the function given after this given time.
+        }
+
+        function clearInt(){
+            window.clearInterval(myTimer);
+        }
+
+        function myPopup(){
+            alert("Hello");
+        }
+
+
+
+    </script>
+    
+</body>
+</html>

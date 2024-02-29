@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete JavaScript Course</title>
+</head>
+<body>
+    <div id="output">Complete JavaScript Course</div>
+    <input type = "button" onclick="myFun()" value="Click">
+    <script>
+        var output = document.getElementById('output');
+        var str = "abasdn skjkj eqwj k JavaScript adsjkj asllk 123432 43453 321 3 34 javascript 432 432 JavaScript 342 JavaScript4121";
+
+        function myFun(){
+            var p = /javascript/ig; // i-> ignore case sensitive, g-> global occurrence The "g" modifier specifies a global match.
+                                    //A global match finds all matches (not only the first)
+            var r = str.match(p);
+            r.forEach(function(e){
+                console.log(e);
+            })
+        }
+    </script>
+</body>
+</html>

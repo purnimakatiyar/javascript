@@ -1,0 +1,44 @@
+<!--
+    Anonymous functions can be put in variables 
+    who doesn't have any name associated with it.
+
+    Use case more flexibility.
+
+    a
+    returns whole function
+
+    a()
+    undefined
+
+    a = "test" -> reassigning the variable
+    "test"
+
+    a
+    "test"
+
+    a()
+    Uncaught TypeError: a is not a function.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="output"></div>
+    <script>
+        var output = document.getElementById("output");
+        
+        var a = function(b){
+            output.innerHTML = "Welcome to an anonymous function" + b;
+
+        }
+
+    </script>
+</body>
+</html>
+

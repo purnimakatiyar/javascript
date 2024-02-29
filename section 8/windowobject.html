@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window object</title>
+</head>
+<body>
+    <div id="wrapper"></div>
+    <script>
+
+        var output = document.getElementById("wrapper");
+        console.dir(window);
+
+        for(var prop in window){
+            document.write(prop+""+ window[prop] + "<br>");// key value pair of object
+        }
+
+        output.innerHTML += window.innerHeight + "" + window.innerWidth;
+        output.innerHTML += window.location;
+
+        var w = window.open("index2.html");
+
+        w.onbeforeunload = function(){
+            alert("don't go anywhere.");
+        }
+        
+    </script>
+</body>
+</html>

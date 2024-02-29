@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+</head>
+<body>
+    <div id="wrapper">Page 1</div>
+    <input type="button" onclick="startInt()" value="start">
+    <script>
+        var myTimer;
+        var output = document.getElementById("wrapper");
+        
+
+        function startInt(){
+            myTimer = window.setTimeout(myPopUp, 1000);
+        }
+
+        function myPopUp(){
+            output.innerHTML = "Welcome to my website";
+        }
+
+    </script>
+    
+</body>
+</html>

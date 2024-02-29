@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="item">
+    <br>
+    <input type="button" onClick="addItem()" value="Add Item">
+    <br>
+    <div id="output"></div>
+    <script>
+        var shoppingList = [];
+
+        function addItem(){
+            var addItem = document.getElementById("item").value;
+            shoppingList.push(addItem);
+
+            function outputList(){
+                var html = "";
+                var output = document.getElementById("output");
+                for(var x = 0; x<shoppingList.length; x++){
+                    html += (x+1)+ ". " + shoppingList[x] +"<br>";
+
+                }
+                output.innerHTML = html;
+
+            }
+            outputList();
+        }
+    </script>
+</body>
+</html>

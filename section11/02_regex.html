@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Javascript course</title>
+</head>
+<body>
+    <div id="output">
+        <input type="text" id="email" value="email@email.com">
+        <input type="text" id="name" value="123321">
+        <input type="text" id="cha" value="characters">
+        <input type="button" onclick="myFun()" value="Validate Inputs">
+        <script>
+
+            var output = document.getElementById('output');
+            var str = "abasdn skjkj eqwj k JavaScript adsjkj asllk 123432 43453 321 3 34 javascript 432 432 JavaScript 342 JavaScript4121";
+
+            function myFun(){
+                e = document.getElementById('email').value;
+                var p = /([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z.]+)/ig;
+                var r = e.match(p);
+                var t = r == null ? false : true;
+                console.log(t);
+                return t;
+            }
+        </script>
+    </div>
+</body>
+</html>
