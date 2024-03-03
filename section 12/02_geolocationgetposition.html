@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete JavaScript Course</title>
+</head>
+<body>
+    <div id="output">Complete Javascript Course</div>
+
+    <script>
+
+        window.onload = init;
+        function init(){
+            navigator.geolocation.getCurrentPosition(placeMap);
+        }
+
+        function placeMap(data){
+            // console.log(data);
+            console.dir(data);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete JavaScript  Course</title>
+</head>
+<body>
+    <div id = "output">Complete JavaScript Course</div>
+    <input type="file" multiple onchange="upFiles(this.files)">
+    <div id="message"></div>
+
+    <script>
+
+        var message = document.getElementById('message');
+        if(window.FileReader){
+            message.innerHTML = "file reader is available";
+
+        }
+        else{
+            message.innerHTML = "file reader NOT available";
+        }
+
+        function upFiles(files){
+            console.log(files) // returns FileList
+            for(var x = 0;x<files.length; x++){
+                var fReader = new FileReader();
+                console.log(fReader);
+                console.log("JHDJ");
+                fReader.onload = function(e){
+                    // message.innerHTML += '<br>' + files[x].name;
+                    message.innerHTML += '<br>' + e.target.result;
+                }
+                fReader.readAsText(files[x]);
+
+            }
+        }
+    </script>
+</body>
+</html>

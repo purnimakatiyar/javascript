@@ -8,7 +8,7 @@
 <body>
     <script>
 
-        // document.cookie = "login=true";
+        // document.cookie = "login=true","test=one";
 
         function cCookie(name, value, days){
             var e = "";
@@ -31,6 +31,7 @@
                 // var t = c[x].trim();
                 var t = c[x].replace(/^\s+|\s+$/gm, '');
                 if (t.indexOf(p) == 0) {
+                    console.log(t.substring(p.length, t.length));
                     return t.substring(p.length, t.length);
                 }
             }
@@ -41,7 +42,11 @@
             function dCookie(name) {
             cCookie(name, "", -1);
         }
+        test=login
+        cCookie('test','login=true',6);
+        cCookie('test2','login=true;extra=user',6);
         var myCookie = rCookie('test');
+        rCookie('test2');
 
 
     </script>
