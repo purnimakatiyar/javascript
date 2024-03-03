@@ -1,0 +1,76 @@
+/* *{
+    
+    background: url(image.jpg);
+    background-size: 1000px 1200px;
+    align-items: center;
+    /* opacity: 0.5;  
+} */
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: aliceblue;
+    /* margin: 0;
+    padding: 0; */
+}
+
+
+input[type="button"]{
+    border-radius: 100px;
+    height: 30px;
+    width: 80px;
+    margin: 5px;
+    padding: 5px;
+}
+
+#fileupload{
+
+    width: 80%;
+    margin: 50px auto;
+    background-color: rgb(156, 223, 241);
+    padding: 20px;
+    border-radius: 10px;
+
+
+}
+
+#output{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#fileInput{
+    margin-bottom: 20px;
+}
+
+#save_btn, #cancel_btn, #delete_btn{
+    padding: 10px 10px;
+    margin-right: 10px;
+    padding-bottom: 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: rgb(35, 94, 244);
+    color: white;
+    font-size: 15px;
+    border-color: black;
+    size: 10px;
+    height: 10px;
+    width: 80px;
+
+}
+
+#save_btn:hover, #cancel_btn:hover, #delete_btn:hover {
+    background-color: #45a049;
+}
+
+#message {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+
+

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+</head>
+<body>
+    <div id="fileupload">
+    <div id="output">File Uploader</div>
+    <input id="fileInput" type ="file" multiple onchange="myFunc(this.files)">
+  
+    <input id = "save_btn" type ="button" onclick="saveFile()" value="Save">
+    <input id = "cancel_btn" type="button" onclick="cancelFile()" value="Cancel">
+    <input id = "delete_btn" type="button" onclick="deleteFile()" value="Delete">
+
+    <div id="message">File Content</div>
+</div>
+   
+</body>
+</html>
