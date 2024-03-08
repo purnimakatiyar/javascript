@@ -11,13 +11,12 @@
 <body>
     <div id="fileupload">
     <div id="output">File Uploader</div>
-    <input id="fileInput" type ="file" multiple onchange="myFunc(this.files)">
+    <input id="fileInput" type ="file" multiple onchange="myFunc(this.files)"; >
   
-    <input id = "save_btn" type ="button" onclick="saveFile()" value="Save">
-    <input id = "cancel_btn" type="button" onclick="cancelFile()" value="Cancel">
-    <input id = "delete_btn" type="button" onclick="deleteFile()" value="Delete">
 
-    <div id="message">File Content</div>
+    <h3>Files</h3>
+    <div id="message"></div>
+    <div id="fileselected"></div>
 </div>
    
 </body>
