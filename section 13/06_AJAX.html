@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX</title>
+</head>
+<body>
+    
+    <script>
+        window.onload = init;
+
+        function init(){
+            loadJSON();
+        }
+
+        function loadJSON(callback){
+            var xHR = new XMLHttpRequest;
+            xHR.onreadystatechange = function(){
+                if (this.readyState == 4 && this.status == 200) {
+                    var myObj = JSON.parse(this.responseText);
+                    console.log(myObj);
+                }
+            }
+            xHR.open('GET', 'https://api.myjson.online/v1/records/d4c31837-f492-4cc1-8cc8-8b6682b9da96', true);
+            xHR.send();
+            console.log(xHR);
+        }
+    </script>
+</body>
+</html>

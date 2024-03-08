@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="nums">
+    <input type="button" id="btn" value = "Checker">
+
+    <script>
+        const nums = document.querySelector('#nums');
+        const btn = document.querySelector('#btn');
+
+        btn.onclick = () => {
+            const inputValue = nums.value;
+            const patt = /^[0-3]*$/g;
+            const results = inputValue.match(patt);
+            console.log(results);
+            const valNum = results != null;
+            console.log(valNum);
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var user1 = 'Laurence';
+        let user2 = 'Laurence';
+        const user3 = 'Laurence';
+
+        console.log(`${user1} ${user2} ${user3}`);
+
+        if(true){
+            var user1 = 'Mike';// it overrides the value of the above declared var
+            let user2 = 'Mike'; // it does not.
+            const user3 = 'Mike';
+
+            console.log(`${user1} ${user2} ${user3}`);
+
+        }
+
+        console.log(`${user1} ${user2} ${user3}`);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!-- for of -> used to iterate through iterable objects not objects-->
+<!-- for in iterates over enumerable properties of an objects -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const arr = [1, 2, 3, 4, 5];
+        const str = 'Laurence';
+
+        for(const letter of str){
+            console.log(letter);
+        }
+         
+        ((...arguments)=>{
+            for(const val of arguments){
+                console.log(val);
+            }
+        })(1,2,3,4);
+
+        (function(){
+            for(const val of arguments){
+                console.log(val);
+            }
+        })(1,2,3,4,5,6,7,8);
+
+
+        for(let i =0;i<arr.length; i++){
+            console.log(arr[i]);
+        }
+
+        for(let val of arr){
+            console.log(val);
+        }
+
+
+    </script>
+</body>
+</html>
+
+

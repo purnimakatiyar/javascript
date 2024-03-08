@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Javascript Course</title>
+    </head>
+
+    <body>
+        <script>
+            const myArr = [3, 5, 6, 323, 33, 443, 5, 2332, 32, 34, 45, 435, 435543, 435, 50, 451, 53223];
+            const val1 = myArr
+            .find((x) => {
+                return x>50;
+
+            })
+            console.log(val1);
+            let val2= myArr.map((x)=>{
+                if(x>50){
+                    return x;
+                }
+                else{
+                    return 0;
+                }
+
+            })
+
+            console.log(val2);
+            let val3 = myArr.filter(x=> x>50);
+            cosnole.log(val3);
+            let val4 = myArr.find(x=> x>50);
+            console.log(val4);
+            let val5 = myArr.findIndex(x => x>50);
+            console.log(val5);
+            console.log(myArr[val5]);
+            
+        </script>
+    </body>
+</html>
